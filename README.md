@@ -1,5 +1,13 @@
-# Rituwall Backend!
+NodeJS & MongoDB Sample Backend
+===============================
 
----
+This is a sample backend application developed by Rituwall Inc. 
+to evaluate the use of NodeJS and MongoDB.
 
-<cite>&copy; 2011 <a href="http://rituwall.com">Rituwall, Inc.</a>. All rights reserved.</cite>
+This application provides the basic methods and structure to 
+add, update and remove data from a MongoDB database.
+
+Author: R. Javier Vega
+Web: http://www.rjaviervega.com
+
+© 2011 Rituwall, Inc. All rights reserved.
