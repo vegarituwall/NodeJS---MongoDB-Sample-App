@@ -1,0 +1,20 @@
+<html>
+<body>
+
+
+{{#first_name}}
+<p>Logged in as {{first_name}}</p>
+<a href="/logout">Logout</a>
+{{/first_name}}
+{{^first_name}}
+<a href="/auth/facebook">Login with Facebook</a>
+{{/first_name}}
+
+<br>
+<br>
+<a href="/">Back to HOME</a>
+
+
+
+</body>
+</html>

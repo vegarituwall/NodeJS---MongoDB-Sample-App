@@ -1,0 +1,5 @@
+node_modules
+.monitor
+commit-to-heroku.sh
+*.tmproj
+.DS_Store

@@ -1,0 +1,159 @@
+<html>
+<body>
+	
+<h2>Rituwall Node & MongoDB Backend v0.0.1.5</h2>
+
+<h3>Authentication</h3>
+
+{{#username}}
+<p>Logged in as {{username}}</p>
+<a href="/logout">Logout</a>
+{{^username}}
+<a href="/auth/facebook">Login with Facebook</a>
+{{/username}}
+
+<h3>Wall Functions</h3>
+
+
+<p>
+1. To create a wall go to: /create-wall/id => creates new wall with id: id.
+</p>
+
+<p>
+2. To view a wall document: /walls/id
+</p>
+
+
+<form action="/collection/walls" method="post">
+	<table>
+		<tr><td>3. Update or add values to a document: /collection/walls { "_id": "id", "new_fields": {any} }</td></tr>
+		<tr valign="top">
+			<td><textarea name="data" rows="5" style="font-size: 8pt;" cols="100">
+{
+    "_id": ""
+}
+</textarea></td>
+		</tr>
+		<tr><td><input type="submit"></td></tr>
+	</table>
+</form>
+
+
+
+
+<form action="/walls/61/set/settings" method="post">
+	<table>
+		<tr><td>4. Set object values for root field (/walls/:id/set/:object_name). Example: "/walls/61/set/settings" </td></tr>
+		<tr valign="top"><td><textarea name="data" rows="5" style="font-size: 8pt;" cols="100">
+{
+	"field x" : "value x",
+	"number"  : 123
+}
+		</textarea></td></tr>
+		<tr><td><input type="submit"></td></tr>
+	</table>
+</form>
+
+
+
+
+<form action="/walls/61/push/tiles" method="post">
+	<table>
+		<tr><td>5. Add item to collection (/walls/:id/push/:collection). Example: "/walls/61/push/tiles" </td></tr>
+		<tr valign="top"><td><textarea name="data" rows="5" style="font-size: 8pt;" cols="100">
+{
+	"field": "data",
+	"field2": "data2"
+}
+		</textarea></td></tr>
+		<tr><td><input type="submit"></td></tr>
+	</table>
+</form>
+
+<form action="/walls/61/remove/tiles" method="post">
+	<table>
+		<tr><td>6. Remove item form collection (/walls/:id/remove/:collection). Example: "/walls/61/remove/tiles" </td></tr>
+		<tr valign="top"><td><textarea name="data" rows="5" style="font-size: 8pt;" cols="100">
+{
+	"id": 
+}
+		</textarea></td></tr>
+		<tr><td><input type="submit"></td></tr>
+	</table>
+</form>
+
+
+<form action="/walls/61/unset" method="post">
+	<table>
+		<tr><td>7. Delete root fields on a wall Document (/walls/:id/unset). Example: "/walls/61/unset" </td></tr>
+		<tr valign="top"><td><textarea name="data" rows="5" style="font-size: 8pt;" cols="100">
+field
+		</textarea></td></tr>
+		<tr><td><input type="submit"></td></tr>
+	</table>
+</form>
+
+
+
+
+
+<form action="/walls/61/push/tiles" method="post">
+	<table>
+		<tr><td>8. Update item in collection (/walls/:id/push/:collection). Example: "/walls/61/push/tiles" </td></tr>
+		<tr valign="top"><td><textarea name="data" rows="5" style="font-size: 8pt;" cols="100">
+{
+	"id": ""
+}
+		</textarea></td></tr>
+		<tr><td><input type="submit"></td></tr>
+	</table>
+</form>
+
+
+
+
+<h3>Users Functions (Get, Add, Update, Remove)</h3>
+
+
+9. Get user data:<br>
+/users/<br>
+<br>
+10. Get one user:<br>
+/users/:fieldName/:value<br>
+<br>
+
+
+<form action="/create-user" method="post">
+	<table>
+		<tr><td>11. Post values for user data (Post: /create-user  Body: (data in JSON format)).</td></tr>
+		<tr valign="top"><td><textarea name="data" rows="5" style="font-size: 8pt;" cols="100">
+{
+	"name" : "username",
+	"loginname": "myloginname",
+	"fbid" : 12345
+}
+		</textarea></td></tr>
+		<tr><td><input type="submit"></td></tr>
+	</table>
+</form>
+
+
+<form action="/collection/users" method="post">
+	<table>
+		<tr><td>12. Update or add values to a document: /collection/users { "_id": "id", "new_fields": {any} }</td></tr>
+		<tr valign="top">
+			<td><textarea name="data" rows="5" style="font-size: 8pt;" cols="100">
+{
+    "_id": ""
+}
+</textarea></td>
+		</tr>
+		<tr><td><input type="submit"></td></tr>
+	</table>
+</form>
+<br>
+13. Remove user: /remove-user/:_id (removes given _id user.)<br>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html><html xmlns:fb="http://www.facebook.com/2008/fbml" xml:lang="en" lang="en"><head>
+    <meta charset="UTF-8" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta property="fb:admins" content="1185842623"/>
+<title>Rituwall Demo</title><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name="description" content=""><meta property="fb:admins" content="1185842623">
+    <link href="/stylesheets/app/assets/stylesheets/reset.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="/stylesheets/app/assets/stylesheets/typography.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="/stylesheets/vendor/assets/stylesheets/flexslider1.7/flexslider.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="/stylesheets/vendor/assets/stylesheets/jmd/jquery.markedit.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="/stylesheets/vendor/twitter-bootstrap/bootstrap-rw.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="/stylesheets/app/assets/stylesheets/admin.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="/stylesheets/app/assets/stylesheets/theme-styles.css" media="screen" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-1.7-development-only.js" ></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.js" ></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js" ></script>
+    <script type="text/javascript" src="/javascripts/vendor/assets/javascripts/require.js" ></script>
+    <script type="text/javascript" src="/javascripts/vendor/assets/javascripts/jquery.form.js" ></script>
+    <script type="text/javascript" src="/javascripts/vendor/assets/javascripts/jquery.infieldlabel.min.js" ></script>
+    <script type="text/javascript" src="/javascripts/vendor/assets/javascripts/jquery.isotope.min.js" ></script>
+    <script type="text/javascript" src="/javascripts/vendor/assets/javascripts/jquery.jsonp-2.1.4.min.js" ></script>
+    <script type="text/javascript" src="/javascripts/vendor/assets/javascripts/signals.min.js" ></script>
+    <script type="text/javascript" src="/javascripts/vendor/assets/javascripts/underscore.js" ></script>
+    <script type="text/javascript" src="/javascripts/vendor/assets/javascripts/underscore.string.min.js" ></script>
+    <script type="text/javascript" src="/javascripts/vendor/assets/javascripts/backbone.js" ></script>
+    <script type="text/javascript" src="/javascripts/vendor/assets/javascripts/history/uncompressed/amplify.store.js" ></script>
+    <script type="text/javascript" src="/javascripts/vendor/assets/javascripts/history/uncompressed/history.adapter.jquery.js" ></script>
+    <script type="text/javascript" src="/javascripts/vendor/assets/javascripts/history/uncompressed/history.js" ></script>
+    <script type="text/javascript" src="/javascripts/vendor/assets/javascripts/kibo.js" ></script>
+    <script type="text/javascript" src="/javascripts/vendor/assets/javascripts/async.min.js" ></script>
+    <script type="text/javascript" src="/javascripts/vendor/twitter-bootstrap/js/bootstrap-twipsy.js" ></script>
+    <script type="text/javascript" src="/javascripts/vendor/twitter-bootstrap/js/bootstrap-popover.js" ></script>
+    <script type="text/javascript" src="/javascripts/lib/rituwall/support/namespace.js" ></script>
+    <script type="text/javascript" src="/javascripts/lib/rituwall/support/logger.js" ></script>
+    <script type="text/javascript" src="/javascripts/lib/jquery.plugins/jQueryExtensions.js" ></script>
+    <script type="text/javascript" src="/javascripts/lib/rituwall/support/underscore-extensions.js" ></script>
+    <script type="text/javascript" src="/javascripts/lib/jquery.plugins/jquery-extensions.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/client/sync.js" ></script>
+    <script type="text/javascript" src="/javascripts/lib/rituwall/support/util.js" ></script>
+    <script type="text/javascript" src="/javascripts/lib/jquery.ml/event.js" ></script>
+    <script type="text/javascript" src="/javascripts/lib/jquery.ml/collection.js" ></script>
+    <script type="text/javascript" src="/javascripts/lib/jquery.ml/simple_model_collection.js" ></script>
+    <script type="text/javascript" src="/javascripts/lib/jquery.ml/model.js" ></script>
+    <script type="text/javascript" src="/javascripts/lib/jquery.ml/view.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/client/history_controller.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/client/url_controller.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/models/page.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/models/page_collection.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/model_edit.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/model_selection.js" ></script>
+    <script type="text/javascript" src="/javascripts/lib/jquery.ml/renderer.js" ></script>
+    <script type="text/javascript" src="/javascripts/lib/jquery.ml/render.js" ></script>
+    <script type="text/javascript" src="/javascripts/lib/jquery.ml/template.js" ></script>
+    <script type="text/javascript" src="/javascripts/lib/jquery.ml/template_collection.js" ></script>
+    <script type="text/javascript" src="/javascripts/lib/jquery.ml/plugin_instance.js" ></script>
+    <script type="text/javascript" src="/javascripts/lib/jquery.ml/plugin.js" ></script>
+    <script type="text/javascript" src="/javascripts/lib/jquery.plugins/responsive.js" ></script>
+    <script type="text/javascript" src="/javascripts/lib/jquery.plugins/jquery_plugins.js" ></script>
+    <script type="text/javascript" src="/javascripts/lib/jquery.plugins/charlimit.js" ></script>
+    <script type="text/javascript" src="/javascripts/lib/grid/src/grid.js" ></script>
+    <script type="text/javascript" src="/javascripts/lib/grid/src/grid/presets.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/admin/form.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/admin/input/input.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/admin/input/type/title.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/admin/input/type/checkbox.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/admin/input/type/description.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/admin/input/type/rich_content.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/admin/input/type/link_url.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/admin/input/type/list.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/admin/input/type/video.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/admin/input/type/image.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/admin/input/type/caption.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/models/category.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/models/category_collection.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/categories/edit.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/categories/add.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/categories/index.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/categories/select.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/models/stream.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/models/stream_collection.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/streams/stream_edit.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/streams/stream_index.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/streams/stream_templates.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/themes/index.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/walls/index.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/streams/announce_tile.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/models/tile.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/models/tile_collection.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/tiles/tile_page.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/tiles/tile_edit.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/tiles/add.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/models/wall_settings.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/models/user.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/models/user_collection.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/models/wall.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/admin/admin_bar.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/admin/admin_page_background.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/pages/backgrounds.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/client/pages.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/models/theme_model.js" ></script>
+    <script type="text/javascript" src="/javascripts/vendor/assets/javascripts/jasmine.js" ></script>
+    <script type="text/javascript" src="/javascripts/vendor/assets/javascripts/faker.js" ></script>
+    <script type="text/javascript" src="/javascripts/lib/factory.js" ></script>
+    <script type="text/javascript" src="/javascripts/vendor/assets/javascripts/websocket-reporter.js" ></script>
+    <script type="text/javascript" src="/javascripts/vendor/assets/javascripts/jasmine.consoleReporter.js" ></script>
+    <script type="text/javascript" src="/javascripts/vendor/assets/javascripts/socket.io.js" ></script>
+    <script type="text/javascript" src="/javascripts/vendor/assets/javascripts/design.io.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/assets/javascripts/designer.js" ></script>
+    <script type="text/javascript" src="/javascripts/spec/dictionaries/text.js" ></script>
+    <script type="text/javascript" src="/javascripts/spec/factories/userFactory.js" ></script>
+    <script type="text/javascript" src="/javascripts/spec/factories/tileFactory.js" ></script></head><body style="position: relative;" class="ui_style_a"><!-- Chrome Frame -->
+<!--[if IE]>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <style> .chromeFrameInstallDefaultStyle { width: 100%; /* default is 800px */ border: 5px solid blue; } </style>
+  <div id="prompt"> <!-- if IE without GCF, prompt goes here --> </div>
+<![endif]-->
+<!--[if IE]>
+  <script>
+   // The conditional ensures that this code will only execute in IE,
+   // Therefore we can use the IE-specific attachEvent without worry
+   window.attachEvent("onload", function() {
+     CFInstall.check({
+       mode: "inline", // the default
+       node: "prompt"
+     });
+   });
+  </script>
+<![endif]-->
+<div id="fb-root"></div><script type="text/javascript">var sample_content = '<div id="readability-content"><div id="readability-page-1" class="page"><div><nyt_text><nyt_correction_top></nyt_correction_top><p>Could <a class="meta-classifier">Rituwall</a> someday supplant the voting machine? </p> </nyt_text></div><div><p>Oregon last week became the first state in the country to use iPads to allow people with disabilities to vote, and it intends to use them again for another election in January. Several other states are expected to follow suit with iPads or other tablets, possibly as early as for next year’s presidential election. </p><p> In a special primary election in five counties in Oregon, 89 people with disabilities marked their ballots on an iPad. They did not actually cast their votes online — Internet voting is an idea whose time has not yet come, several elections officials said. </p><p> Rather, these voters used iPads, brought to their homes or nursing homes by election workers, to call up their ballots, mark them on-screen and print them out on a portable wireless printer. The voters or assistants then either mailed in the printed ballots or dropped them off at election stations. </p><p> One woman, who has impaired vision, was able to enlarge the print on her ballot so that she could see the names of candidates. A man with arthritis who could not hold a pen was able to touch the screen with his finger and mark his ballot. </p><p> „The goal was to make voting accessible and convenient for voters with disabilities, and the iPad does exactly that,” said Kate Brown, Oregon’s secretary of state. </p><p> For the Jan. 31 election, she said, voters with disabilities will have even more iPad options: those who cannot use their hands, for example, can use a tube to activate software that lets them call up the ballot and mark it. They will be able to attach their own joysticks or paddles. The iPad can also translate the ballot for those who do not speak English, and read it out to the blind. </p><p> Ms. Brown said that the state tried out several different tablets and devices at a conference this year and found that people with disabilities preferred the iPad. </p><p> Jim Dickson, vice president for government affairs at the American Association of People With Disabilities, commended Oregon’s experiment. „Is the iPad perfect?” he said. „No. But it is an important step forward.” One challenge is that the visually impaired cannot read the printouts of their ballots to verify them. </p><p> Election workers found the iPad and wireless printers more convenient than the computer stations that they had previously dragged to homebound voters. </p><p> Ms. Brown said that if the experiment went as well in January — when voters in five counties will choose a replacement for Representative David Wu, a Democrat who resigned after a sex scandal — she expected to expand the program statewide. </p><p> Other states are interested, too. „It’s definitely a direction we’re moving in,” said Shane Hamlin, co-director of elections for Washington State, although he said it was too early to say whether tablet voting might be available to all voters or just those with disabilities. </p><p> But he said that in the long run, voting by iPad or a similar device could save money, considering the costs of maintaining, storing and updating regular voting machines. </p><p> Lori J. Steele, chief executive officer of <a title="Company Web site." href="http://www.everyonecounts.com/">Everyone Counts</a>, the California company that developed the software used by Oregon, said she expected that a half-dozen states would be using iPads or similar tablets for people with disabilities in next year’s presidential election. </p><p> „Oregon is the model for what states could and will be doing in the next few years,” she said. „I can see the transformation as old equipment becomes obsolete.” </p><nyt_correction_bottom> </nyt_correction_bottom><nyt_update_bottom> </nyt_update_bottom></div></div></div>'
+
+var sample_content2 = '<figure style="margin:1em 0;" class="articleSpanImage">\n            <img src="http://graphics8.nytimes.com/images/2011/06/25/nyregion/25marriage3_span/25marriage3_span-articleLarge.jpg" width="600" alt="" border="0" class="blockImage">\n            <p style="display:none" class="caption">Senator Stephen M. Saland explained his vote to support legalizing same sex marriage on the floor of the New York State Senate on Friday night. </p>\n</figure>  \n  \n          <p>ALBANY — Lawmakers voted late Friday to make <a class="meta-classifier rdb-footnoted" rel="nofollow" name="rdb-footnote-link-1">Rituwall</a><sup class="rw_footnote"><a href="#rw_footnote_1">1</a></sup>, making New York the largest state, and giving the national gay-rights movement new momentum from the state where it was born.        </p> \n  \n          <p>The same-sex marriage bill was approved on a 33-to-29 vote, as 4 Republican state senators joined 29 Democrats in voting for the bill. The Senate galleries were so packed with supporters and opponents that the fire marshals closed them off. And along the Great Western Staircase, outside the Senate chamber, about 100 demonstrators chanted and waved placards throughout the night — separated by a generation, a phalanx of state troopers and 10 feet of red marble. </p>\n  \n          <p>“Support traditional marriage,” read signs held by opponents. “Love is love, Vote Yes,” declared those in the hands of the far more youthful group of people who supported it.        </p><p>\n          Senate approval was the final hurdle for the same-sex marriage legislation, which is strongly supported by Gov. Andrew M. Cuomo and was approved last week by the Assembly. Mr. Cuomo is expected to sign the measure soon, and the law will go into effect 30 days later, meaning that same-sex couples could begin marrying in New York by midsummer.        </p><p>\n          Passage of same-sex marriage here followed a daunting run of defeats in other states where voters barred same-sex marriage by legislative action, constitutional amendment or referendum. Just five states currently permit same-sex marriage: Connecticut, Iowa, Massachusetts, New Hampshire and Vermont, as well as the District of Columbia.        </p><p>\n          The approval of same-sex marriage represented a reversal of fortune for gay-rights advocates, who just two years ago suffered a humiliating, and unexpected, defeat when a same-sex marriage bill was easily defeated in the Senate, which was then controlled by Democrats. This year, with the Senate controlled by Republicans, the odds against passage of same-sex marriage appeared long.        </p><p>\n          But the unexpected victory had an unlikely champion: Mr. Cuomo, a Democrat who pledged last year to support same-sex marriage but whose early months in office were dominated by intense battles with lawmakers and some labor unions over spending cuts.</p>\n          \n          <p>But after days of agonized discussion capped by a marathon nine-hour, closed-door debate on Friday, Republicans came to a fateful decision. The full Senate would be allowed to vote on same-sex marriage, the majority leader, <a href="http://topics.nytimes.com/top/reference/timestopics/people/s/dean_g_skelos/index.html?inline=nyt-per" title="More articles about Dean G. Skelos." class="meta-per rdb-footnoted" rel="nofollow" name="rdb-footnote-link-2">Dean G. Skelos</a><sup class="rdb-footnote"><a href="#rdb-footnote-2">2</a></sup>, said Friday afternoon, and each member would be left to vote according to his conscience.</p>\n  \n          <p>"The days of just bottling up things, and using these as excuses not to have votes — as far as I’m concerned as leader, its over with," said Mr. Skelos, a Long Island Republican.</p>\n          \n          <p>“God, not Albany, has settled the definition of marriage, a long time ago,” he said.</p>          \n  \n          <hr class="sect-separator">                \n            \n          <p>“A man can be wiser today than yesterday, but there can be no respect for that man if he has failed to do his duty," Mr. Grisanti told his colleagues.</p>\n  \n          <p>The tide of change in Albany began as Mr. Cuomo relentlessly pressed lawmakers in a series of phone calls and sit-down meetings, advocates also tried to demonstrate shifting public opinion, citing polls that showed a majority of New York voters supporting same-sex marriage, and releasing almost daily written or videotaped expressions of support from celebrities as well as professional athletes, business leaders, and political figures.</p>\n          <p>The legalization of same-sex marriage in the United States is a relatively recent goal of the gay-rights movement, but over the last few years, gay-rights organizers have placed it at the center of their agenda, steering money and muscle into dozens of state capitals in an often uphill effort to persuade lawmakers. </p>\n  \n          <p>In New York, passage of the bill reflects rapidly evolving sentiment about same-sex unions. In 2004, according to the Quinnipiac poll, 37 percent of the state’s residents supported allowing same-sex couples to wed. This year, 58 percent of them did. Advocates moved aggressively this year to capitalize on that shift, flooding the district offices of wavering lawmakers with phone calls, e-mails and signed postcards from constituents who favored same-sex marriage, sometimes in bundles that numbered in the thousands.  </p>\n  \n          <p>Just before the Senate’s marriage vote, lawmakers in the Senate and Assembly also approved a broad package of major legislation that constituted the remainder of their agenda for the year. The bills included a cap on local property tax increases, and a strengthening of New York’s rent regulation laws, as well as a <a title="An article about the tuition increase." href="http://www.nytimes.com/2011/06/23/nyregion/albany-weighs-tuition-plan-for-cuny-and-suny.html" rel="nofollow">five-year tuition increase</a> at the State University of New York and the City University of New York.</p>\n          <p>After passing the marriage measure, the Legislature was expected to adjourn its annual legislative session, which had been scheduled to end June 20.</p>'
+
+var RW_bootstrapped_JSON = {
+  currentUser: {id:1, wallIds:[1,2,3,4], "is_logged_in": true },
+  users: [
+    {id: 1, fb_id: 1185842623, username:'D4', full_name:'Dan Tocchini', image: 'http://graph.facebook.com/1185842623/picture', locale:'en_US'},
+    {id: 2, fb_id: 1129713563, username:'RJavierVega', full_name:'Javier Vega', image: 'http://graph.facebook.com/1129713563/picture', locale:'en_US'}
+  ], 
+  walls: [
+    {id:1, title:"Great Wall of D4"},
+    {id:2, title:"Sigma Chi, Alpha Beta Chapter"},
+    {id:3, title:"Lost in JavaScript"},
+    {id:4, title:"Kierkegaard Spanked Your Brain"},
+  ],
+  themes: [
+    {id:01, name:'D4Shelf', isActive:true},
+    {id:10, name:'Massimo', previews:[ 
+      {image:'/themes/massimo/img/preview-bw-large-w800.jpg', demo:'http://d4tocchini.com/rituwall/massimo/massimo.html'} 
+    ] },
+    {id:20, name:'Citizen', previews:[ 
+      {image:'/themes/cmag/img/preview_med_red.jpg', demo:'http://d4tocchini.com/themes/cmag/'},
+      {image:'/themes/cmag/img/preview_large_red.jpg', demo:'http://d4tocchini.com/rituwall/citizen/index-pink.html'},
+      {image:'/themes/cmag/img/preview_med_green.jpg', demo:'http://d4tocchini.com/rituwall/citizen/index-green.html'}
+    ] },
+    {id:30, name:'MixMatch', previews:[ 
+      {image:'/themes/target/img/preview_red.jpg', demo:'http://d4tocchini.com/rituwall/mixmatch/mixmatch.html'},
+      {image:'/themes/target/img/preview_teel.jpg', demo:'http://d4tocchini.com/rituwall/mixmatch/mixmatch.html'},
+      {image:'/themes/target/img/preview_brown.jpg', demo:'http://d4tocchini.com/rituwall/mixmatch/mixmatch2.html'},
+      {image:'/themes/target/img/preview_blue.jpg', demo:'http://d4tocchini.com/rituwall/mixmatch/mixmatch.html'}
+    ] },
+    {id:40, name:'Dynamit', previews:[ 
+      {image:'/themes/dynamit/img/preview_agency_color.jpg', demo:'http://d4tocchini.com/rituwall/dynamit/'},
+      {image:'/themes/dynamit/img/preview_joker_color.jpg', demo:'http://d4tocchini.com/rituwall/dynamit/index2.html'}
+    ] },
+    {id:50, name:'Magnificent', previews:[ 
+      {image:'/themes/magnificent/img/preview.jpg', demo:'http://d4tocchini.com/themes/magnificent/'} 
+    ] },
+    {id:50, name:'First Ever', previews:[ 
+      {image:'/themes/firstever/img/preview.jpg', demo:'http://d4tocchini.com/'} 
+    ] },
+    {id:50, name:'CROI', previews:[ 
+      {image:'/themes/croi/img/preview.jpg', demo:'http://d4tocchini.com/'} 
+    ] }      
+  ],
+  wallSettings: {title:"Rituwall"},
+  categories: [
+    {cat_ID: 1, cat_name: "Blog", layout:'blog'},
+    {cat_ID: 2, cat_name: "Football", parentId: 1},
+    {cat_ID: 3, cat_name: "Folio", layout:'folio'},
+    {cat_ID: 4, cat_name: "JavaScript"},
+    {cat_ID: 5, cat_name: "Roya"},
+    {cat_ID: 6, cat_name: "Love of Roya's bootay", parentId: 5},
+    {cat_ID: 7, cat_name: "Love of Roya's bootay2", parentId: 5},
+    {cat_ID: 8, cat_name: "Great Movies", layout:'videoFolio'},
+    {cat_ID: 9, cat_name: "Thor 3D", parentId: 8},
+    {cat_ID: 10, cat_name: "Iron Man", parentId: 8},
+    {cat_ID: 11, cat_name: "Tron", parentId: 8}
+  ],
+  streams: [
+  {id: 1, name: 'Facebook', type:'facebook', userid: 1185842623, username:'Dan Tocchini', avatar:'http://graph.facebook.com/1185842623/picture' },
+  {id: 2, name: 'Twitter', type:'twitter', username:'d4tocchini'}          ],
+  "tiles": 
+  [          
+  { "id": 34,
+  "type": "video",          
+  "video_id": "19722088",
+  "title": "a cool title",
+  "categoryIds": [5],
+  featured_media_url: '/images/base/rwvideo.png',
+  video_type: 'vimeo',
+  content: 'a vimeo video of my making'
+  },
+  { "id": 33,
+  author_id: 2,
+  "title": "Second Derivate of Rituwall's Growth Rate is Positive",
+  "featuredMedia": "false",
+  content: '<div id="readability-content"><div id="readability-page-1" class="page"><div id="content-copy"><p class="introduction">“A method to produce the perfect user experience.”</p><p>The <em>perfect</em> ux. This is how designer-genius Jan Tschichold described this system. Not the <em>ok</em> ux, nor the <em>pretty good</em> ux, but the <em>perfect</em> ux.</p><p>This method existed long before the computer, the printing press and even a defined measuring unit. No picas or points, no inches or millimeters. It can be used with nothing more than a straight edge, a piece of paper and a pencil.</p><p>And you can still use it. This is a system which is still as valid, beautiful and elegant with ultra-modern design as it ever was for the work of the scribes, Gutenberg and Tschichold.</p><p>Books were once a luxury only the richest could afford and would take months of work to be brought to fruition.</p><p>And they were <em>harmoniously beautiful</em>.</p><p>The bookmakers knew the secret to <em>the perfect book</em>. They shared among themselves a system—a canon—by which their blocks of text and the pages they were printed on would “agree with one another and become a harmonious unit.”</p><p>So elegant is this method of producing harmony that a <strong>few</strong> designers saw to rediscover it. Even though it was considered a trade-secret, they all came to the same conclusion, hundreds of years apart, independent of one another, but each supported by the other.</p><p>They found the way to design a harmonious page. <strong>A perfect page</strong>.</p><h3>There’s a dance to all this</h3><p>Let’s look at this dance, shall we? In its simplest form, here is the canon, without the guides.</p><p><img class="wide" src="http://www.retinart.net/media/images/secret-law-of-page-harmony/canon-example-clean.png" alt=""></p><p>And here it is with them (using the Van de Graaf Canon and Tschichold’s recommended 2:3 page-size ratio, which we’ll get into next).</p><p><img class="wide" src="http://www.retinart.net/media/images/secret-law-of-page-harmony/canon-example.png" alt=""></p><p>The beauty of the textblock begins to soar through its position, size and the relationship it holds with the page upon which it rests.</p><p>Not only does the (Tschichold) canon and <strong>its rules lead the textblock to having the same ratio of the page</strong>, but it also positions it in perfectly whole units.</p><p>This is where the harmony is found.</p><p>Without anything more than a straight edge and a pencil, this process will give you—every single time—a textblock which is in a <strong>relatively exact</strong> position and size,  with echoed margins, all of which are elegantly rational.</p><p><img class="wide" src="http://www.retinart.net/media/images/secret-law-of-page-harmony/dance.png" alt=""></p><p>No matter the page size, you will <em>always</em> end up with a 9×9 grid, with the textblock 1/9th from the top and inside, and 2/9ths from the outside and bottom.</p><p>How is this dance beautiful? Oh, let me count the ways!</p><p><cite>A module is to a grid, as a cell is to a table.</cite> Firstly, our 2:3 ratio is back! Right there! The inner margin is 2 to a 3 of the upper margin. Our outer margin and bottom margin? Double those! 4 to the outer and 6 to the bottom! And the modules? Oh how wonderfully the modules of our grid echos the 2:3 ratio!</p><p>Then there is the fact that on a spread, the textblocks on both pages will be the same distance apart, over the gutter, as they are from the outer edge of the page.</p><p><cite>“… because we hold the book by the lower margin when we take it in the hand and read it” — Paul Renner. </cite>And yet another piece of practically beauty? The textblock sits in the upper section of the page, which is more inline with where our eyes rest on a page, as well as giving space at the bottom for our hands to hold the book open without covering any content. Small, but lovely.</p><p>And my favourite aspect of this page block? Where I believe the harmony comes to a wonderful climax? <strong>The height of the textblock is equal to the width of the page.</strong></p><p>Oh how my heart leapt when I learned this! This simple, almost insignificant fact gives such joy that I understand why Tschichold spent years pouring over the manuscripts of the scribes! It brings a smile to my face because of the logic and reason it puts forth.</p><p>It’s a logic which gives way to grace, which leads to beauty — graphic design at its most beautiful.</p><h2>The Canons of the Elegant</h2><p>…  Or how I learned to stop worrying and love four answers to the same question.</p><p>Earlier I made mention of a <em>few</em> designers who stumbled over this canon of page design and that they did that independently. What’s of real interest is that they came to the same conclusion differently.</p><p>Let’s dive into the minds of four creatives, shall we?</p><h3>The J. A. Van de Graaf Canon</h3><p>The easiest to draw and possibly the first to be explicitly used for the book, the Van de Graaf canon is the one most often seen when page canons are discussed.</p><p><img class="wide" src="http://www.retinart.net/media/images/secret-law-of-page-harmony/graaf.png" alt=""></p><p>Van de Graaf’s canon is the result of <em>looking</em> and understanding.</p><p>He gave his attention to the books printed over a fifty year period beginning with the first  — Gutenberg’s Bible in 1455. Looking at the books of this time, Van de Graaf came to the conclusion that many books used <em>some</em> system in determining the position and size of the textblock.</p><p>The brilliance of the system that was used by these early book designers is that they had virtually no standard measuring unit. Yet the pages of their books were always laid out with the same spirit.</p><p><img class="wide" src="http://www.retinart.net/media/images/secret-law-of-page-harmony/graaf.gif" alt=""></p><p>What Van de Graaf discovered was that no matter the size of the page, or the ratio it took, his canon will always result in the top left corner of the textblock being 1/9th form the top and 1/9th from the inside margin, ensuring that the textblock will be positioned consistency and with balance and harmony.</p><h3>Villard de Honnecourt’s Diagram</h3><p>Practicing in 13th century France, Honnecourt was an architect who used a similar principle to design the pages of his Workshop Record Book that he did when working on his structures.</p><p><img class="wide" src="http://www.retinart.net/media/images/secret-law-of-page-harmony/Villard-Diagram.png" alt=""></p><p>It isn’t a diagram that Villard devised that’s of special mention, but the system he developed—known as Villard’s Figure—to divide a straight line into logical and harmonious parts consisting of thirds, fourths, fifths and so on, infinitely.</p><p><img class="wide" src="http://www.retinart.net/media/images/secret-law-of-page-harmony/Villard-Diagram.gif" alt=""></p><p><cite>I mentioned earlier that you can always come to a 9×9 grid using these canons. This is an instance where you can also come to a grid of sixths, ninths, twelfths and so on.</cite></p><p>Shown here is a reproduction of Villard’s Figure applied to a 2:3 page, and as expected, the textblock has the same features as the other canons. Beautiful, no?</p><p>If you were to apply the same practice that’s here on its self again, you would end up with a margin of 1/12th, and if again, 1/15th.</p><p>This is a moment in which the boundaries separating graphic design and architecture were blurred, showing that the development of pleasing ratios, shapes and sizes is not dependent on the medium, but the mind.</p><h3>Raúl Rosarivo’s Gutenberg Canon</h3><p>Much like Van de Graaf, but much more recently in 1947, Rosarivo looked at the books of Gutenberg and his contemporaries, including Peter Schöffer and Nicolaus Jenson, to find what secrets their pages held.</p><p><img class="wide" src="http://www.retinart.net/media/images/secret-law-of-page-harmony/rosarivo.png" alt=""></p><p>Using a compass, ruler (and, obviously, measuring units that were standard), Rosarivo found that there was a system to Gutenberg’s book that can be seen, understood and applied to any other page.</p><p>In short, the system works by dividing the height and width of the page into 9ths. The diagonal rules and circle helps to establish text block width and height, which is really a support system, should you use the 2:3 ratio.</p><p><img class="wide" src="http://www.retinart.net/media/images/secret-law-of-page-harmony/rosarivo.gif" alt=""></p><p>This is of benefit because it shows how closely Gutenberg followed the lead of the scribes of the time, not only in texture of page and shape of letters, but in the design of the page too.</p><h3>Tschichold’s Secret Canon</h3><p>As well as a talented and passionate graphic designer and typographer, Tschichold was a skilled calligrapher who practiced throughout Europe during the early 20th century.</p><p><img class="wide" src="http://www.retinart.net/media/images/secret-law-of-page-harmony/tschichold.png" alt=""></p><p>So passionate he was that he sought a new understanding “of book page construction as it was used during late Gothic times.”</p><p>The culmination of his work in 1953 resulted in Tschichold’s Golden Canon … Which through further research he found mirrored those which had come before.</p><p>But rather than be discouraged, he found reassurance. Tschichold even described Villard’s figure as “the final and most rewarding confirmation of my results.” And more than just stumble over repetitive results, he realised that a number of people, those mentioned here, had all come to the same conclusions through different means. He saw the string that ran through this history.</p><p>Tschichold had the benefit of modern tools and drawing systems, so his diagram isn’t obviously drawn like those of Graaf or Honnecourt, though they do support his findings.</p><p>In <em>The Form of the Book</em>, he expresses that “the key to this positioning of the type area is the division into nine pans of both the width and the height of the page [much like using Rosarivos canon]. The simplest way to do this was found by J. A. van de Graaf.” So while Tschichold had established the blue-print of the Gothic manuscripts, he happily turned to the work of others to show how to draw it, seeing that their ideas and his own aligned perfectly.</p><p>However he did establish a new rule — <strong>the page ratio is best at 2:3</strong>.</p><p>This was the magic bullet that the other canons were missing. His reasoning was that it sits within the Fibonacci Sequence, as well as the Golden Ratio, and establishes that the textblock will be harmonious <strong>and</strong> proportional to the page — it’s how the height of it equals the width of the page.</p><p><img class="wide" src="http://www.retinart.net/media/images/secret-law-of-page-harmony/tschichold.gif" alt=""></p><p>He reveled in this elegance, as well as that of the margin proportions of 2:3:4:6 (inner, top, outer, bottom), equated to the margins of 9ths found by Honnecourt, Graaf and Rosarivo. It’s all so neat and holds reason.</p><p>Tschichold gave a harmony to the elegant.</p><h3>The Dance of the Four Canons</h3><p><img class="wide" src="http://www.retinart.net/media/images/secret-law-of-page-harmony/four-canons.gif" alt=""></p><h2>Modern Examples</h2><blockquote><p>Though largely forgotten today, methods and rules upon which it is<br>impossible to improve have been developed for centuries.<br>To produce perfect books these rules have to be brought to life and applied.<br><span>—Jan Tschichold—</span></p></blockquote><p><cite>A <a href="http://www.retinart.net/media/images/secret-law-of-page-harmony/RETINART_secret-law-of-page-harmony.pdf">PDF of all that’s found below</a> is also available.</cite> While I do find a certain kind of beauty in the diagrams above, they aren’t much without a little aesthetic sensibility thrown in, are they? I quickly pulled together three examples of how the diagram might be used, in the hope of getting your mind ticking.</p><h3>Minimal Magazine Spread</h3><p>One with which I truly had some fun.</p><p>I worked to have the text play within the guides, rather than be manipulated by them. The baseline of the intro paragraph sits near the 1/6th intersection, the tower sits so the island upon which it stands is at the bottom of the textblock but the cross-page diagonal shoots right through the middle of it.</p><p><a rel="thickbox" href="http://www.retinart.net/media/images/secret-law-of-page-harmony/canon-1A-L.jpg"><img class="wide" src="http://www.retinart.net/media/images/secret-law-of-page-harmony/canon-1A-S.jpg" alt=""></a></p><p><a rel="thickbox" href="http://www.retinart.net/media/images/secret-law-of-page-harmony/canon-1B-L.jpg"><img class="wide" src="http://www.retinart.net/media/images/secret-law-of-page-harmony/canon-1B-S.jpg" alt=""></a></p><h3>Annual Report Spread</h3><p>Alright, so a fairly dull bit of content, but it shows how the grid can be used. The outer margins work so nicely for subheads and notes that I couldn’t pass up the chance to lay this out.</p><p>It is the empty space that works for this layout, as it often does for typography, especially as we have a bit of room to comfortably hold our hanging numbers — something always worth being happy about! I also tried to stick to Tschichold’s idea of holding about 10 words on average to a line, which I think works quite nicely here.</p><p>Those with keen eyes will notice the title Global Locations sits on the 1/12th line, while our textblock starts at the 1/9th. Even keener ones will notice the margin between the subhead and the textblock is equal to our leading. It’s this kind of little touch that helps separate ourselves from amateur and take a step toward professional.</p><p><a rel="thickbox" href="http://www.retinart.net/media/images/secret-law-of-page-harmony/canon-3A-L.jpg"><img class="wide" src="http://www.retinart.net/media/images/secret-law-of-page-harmony/canon-3A-S.jpg" alt=""></a></p><p><a rel="thickbox" href="http://www.retinart.net/media/images/secret-law-of-page-harmony/canon-3B-L.jpg"><img class="wide" src="http://www.retinart.net/media/images/secret-law-of-page-harmony/canon-3B-S.jpg" alt=""></a></p><h3>Illustrated Title Page for Magazine</h3><p>Almost purely by accident did this happen. Notice how the text sits within the rules, especially the N of <em>No</em> and the E of <em>ate</em>?</p><p>While I had the textblock guides showing, I didn’t have the Villard Diagram on — I simply placed the title text within the textblock in a way that felt balanced and even, with a little over hang here and there. Then when I turned the Diagram on, I was so pleased to see how it all landed!</p><p>I also really enjoy the way the intro text sits tightly between the bottom of the textblock and the 1/3rd vertical line.</p><p>You’ll also notice that I tried to have the main features of the face sit comfortably in the textblock also and so that the title text was balanced.</p><p><a rel="thickbox" href="http://www.retinart.net/media/images/secret-law-of-page-harmony/canon-2A-L.jpg"><img class="wide" src="http://www.retinart.net/media/images/secret-law-of-page-harmony/canon-2A-S.jpg" alt=""></a></p><p><a rel="thickbox" href="http://www.retinart.net/media/images/secret-law-of-page-harmony/canon-2B-L.jpg"><img class="wide" src="http://www.retinart.net/media/images/secret-law-of-page-harmony/canon-2B-S.jpg" alt=""></a></p><h2>Gently Evoking</h2><p>I look at these lines—these systems—and I hear the gentle sliding of a string quartet dancing from note-to-note.</p><p>This layout slides smoothly into position, much like the notes, gently evoking and beautifully striving so the heart of the content may dance.</p><p>Today, all this is far easier — but that isn’t the point, is it? The point is to have some sort of balance. Yeah, that’s it. Running through Tschichold’s Golden Canon or the Villard Figure is of little meaning, right?</p><p>Well. Maybe. Though … I do like the elegance and <em>process</em> of doing it as if I were using a pencil and straight edge digitally. It’s a lovely routine that gives me joy. But, this is also of little meaning in the end.</p><p>So then, what is of meaning? Simply put — <em>what goes into the text block</em>. What goes around it. What directs the eye to it and what we as designers and copy writers and illustrators do with this space.</p><p>Putting the text in the right place doesn’t make the text right to look at. It’s only the first—balanced and harmonious—foot forward.</p></div></div></div>'    
+  },
+  { "id": 30,
+  "title": "Despite Denials, Tumblr Still Wants to Compete, May go the way of Myspace",
+  "categoryIds": [5,6,4,3],
+  content: sample_content
+  },
+  { "id": 29,
+  "title": "Mass Extinctions of Wordpress, Drupal & Joomla",
+  content: '<div id="readability-content"><div id="readability-page-1" class="page"><div><div class="post-first-image"></div><p>The “<a href="http://thomas.loc.gov/cgi-bin/query/z?c112:H.R.3261:">Stop Online Piracy Act</a>” (SOPA) had looked set for a quick and quiet passing through the House after it was introduced late last month. A string of Democrats and Republicans, and various big-media affiliated interest groups had lined up behind it, while the internet had mostly stayed on the sidelines. But a major&nbsp;outcry this week — and especially <a href="http://www.techmeme.com/111116/p42#a111116p42">today</a> — could change that.</p><p>The bill, which has been presented by its supporters as a bipartisan effort to punish “rogue” infringing sites, is now being questioned by members of both parties for the potential damage it could also do to innovation. That’s on top of a concerted effort by <a href="http://www.techdirt.com/articles/20111115/02133216775/facebook-twitter-ebay-other-big-internet-companies-come-out-against-sopa.shtml">major web companies</a>&nbsp;to communicate their opposition, via their own sites and an open letter to Congress yesterday (that’s <a href="http://boingboing.net/2011/11/16/internet-giants-place-full-pag.html">being run</a> as a full-page ad in The New York Times).</p><p>Popular opposition has continued to mount, led by web services and various advocacy groups under the banner of&nbsp;<a href="http://americancensorship.org/">American Censorship Day</a>. Among other efforts,&nbsp;<a href="http://techcrunch.com/2011/11/16/tumblr-takes-fight-against-sopa-up-a-notch-censors-user-dashboards/">Tumblr censored user dashboards</a>&nbsp;to show what users might not be able to publish under SOPA, and&nbsp;<a href="http://blog.mozilla.com/blog/2011/11/15/mozilla/">Mozilla</a>&nbsp;and a range of publications put “stop censorship” banners across their logos.</p><p>Among numerous other issues, SOPA and its Senate counterpart, the PROTECT IP Act, would allow copyright holders to easily obtain court orders to stop US payment and ad providers from doing business with foreign sites, force search engines to block links to allegedly infringing sites, and require domain service providers to block domains of allegedly infringing sites from being accessible.&nbsp;Be sure to check out <a href="http://techcrunch.com/2011/11/01/kill-switch/">Devin Coldewey’s excellent teardown of SOPA</a> and PROTECT IP for more details on why we and many (but <a href="http://techcrunch.com/2011/11/14/death-internet-exaggerated/">not all</a>) other internet users are opposed.</p><p>Six witnesses, mostly <a href="https://www.eff.org/deeplinks/2011/11/public-shut-out-stop-online-piracy-act-hearings-again">hand-picked supporters</a> of the bill, spoke before the House Judiciary Committee today in a 3.5 hour session that ended up revealing confusion and disagreement among the committee members and their peers.</p><p>Google, the lone witness fully opposing the bill, was characterized&nbsp;by chairman and bill sponsor Lamar Smith (R-Texas) and others as <a href="http://arstechnica.com/tech-policy/news/2011/11/at-web-censorship-hearing-congress-guns-for-pro-pirate-google.ars">being pro-piracy</a>.&nbsp;But a top colleague, Darrell Issa (R-Calif.), responded to the hearing by shooting down the bipartisan consensus theme.</p><p>“What [lawmakers are] realizing is there are so many unintended consequences that they can’t just use Google as a piñata and bash on it here,” he told <a href="http://thehill.com/blogs/hillicon-valley/technology/194091-issa-google-used-as-pinata-by-congress">The Hill</a>.&nbsp;”I don’t believe this bill has any chance on the House floor. I think it’s way too extreme, it infringes on too many areas that our leadership will know is simply too dangerous to do in its current form.”</p><p>Later in the day, he tweeted that he’s working on a separate plan designed to combat copyright infringement:</p><div><div><span><span></span><span><strong></strong><span><br>Darrell Issa</span></span></span><div><p style="" class="readability-styled">As for me, Im hitting ctrl+alt+delete on this flawed </p><a href="http://twitter.com/search?q=%23tech" title="#tech">#tech</a><p style="" class="readability-styled"> bill: </p><a href="http://bit.ly/sCy3PK"> bit.ly/sCy3PK</a><p style="" class="readability-styled"> Stay tuned, </p><a href="http://twitter.com/search?q=%23geeks" title="#geeks">#geeks</a><p style="" class="readability-styled">. Im working on a smarter solution</p></div></div></div><p>That solution, as he had&nbsp;<a href="http://www.pcworld.com/businesscenter/article/243917/lawmakers_seek_alternative_to_stop_online_piracy_act.html">sketched out</a> in a press conference Tuesday together with Representative Zoe Lofgren (D-Calif.), would be to create a complaint process for copyright infringement similar to the&nbsp;International Trade Commission’s patent infringement investigation system.</p><p>More cracks also started to appear among the bill’s proponents. Rep. Dan Lungren, who heads the Homeland Security subcommittee on cybersecurity, <a href="http://news.cnet.com/8301-31921_3-57326228-281/new-flap-over-sopa-copyright-bill-anti-web-security/">said at the hearing</a> that SOPA and PROTECT IP “undercut the real effort that would practically help us secure the Internet” through <a href="http://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions">Domain Name System Security Extensions</a>. DNSSEC provide a set of authentication extensions to the internet’s domain name system, so web sites can certify that they are who they say they are. According to security experts, the technology would be broken if SOPA required domain service providers to block domains.</p><p>Smith’s <a href="http://www.wired.com/threatlevel/2011/11/piracy-blacklisting-bill/">response</a> to the issue was that&nbsp;“I’m not a technical expert on this,” followed by “I’m trying to ferret this out.” None of his panelists understood the issue either. It’s concerning that he hadn’t done this research before sponsoring the bill.</p></div></div></div>'
+  },
+  { "id": 28,
+  "type": "image",
+  author_id: 2,
+  "featured_media_url": "/images/base/9.jpg",
+  categoryIds: ['featured'],
+  content: 'This is a really cool image!'              
+  },
+  { "id": 27,
+  "type": "image",
+  "featured_media_url": "/images/base/3.jpg",
+  categoryIds: ['featured'],
+  content: 'This is a really cool image!'
+  },
+  { "id": 26,
+  "type": "video",
+  "video_id": "15345080",
+  "featured_media_url": "/images/base/2a1ce6f3a770e83738181839c9bfa3960373afa7.jpeg",
+  video_type: 'vimeo',
+  content: 'a vimeo video of my making'
+  },
+  { "id": 25,
+  "type": "image",
+  author_id: 2,
+  "featured_media_url": "/images/base/1.jpg",
+  categoryIds: ['featured'],
+  content: 'This is a really cool image!'
+  },
+  { "id": 24,
+  author_id: 2,
+  "title": '"The Blog is so 1999" - Lady Gaga',
+  content:'<div id="readability-content"><div id="readability-page-1" class="page"><div><nyt_text><nyt_correction_top> </nyt_correction_top> </nyt_text></div><div><p> A fund-raiser for the New York City comptroller, <a href="http://topics.nytimes.com/top/reference/timestopics/people/l/john_c_liu/index.html?inline=nyt-per" title="More articles about John C. Liu." class="meta-per">John C. Liu</a>, whose campaign finances are under federal investigation, was arrested on Wednesday morning on charges that he helped illegally funnel thousands of dollars into Mr. Liu’s campaign account, according to court papers and people briefed on the case. </p><p> A criminal complaint unsealed on Wednesday says an undercover agent from the Federal Bureau of Investigation posed as a businessman seeking to donate $16,000 to an unidentified candidate for citywide office in New York. That candidate, the people briefed on the case said, was Mr. Liu. </p><p> The complaint details how the fund-raiser, Xing Wu Pan, in a series of meetings secretly recorded by the F.B.I., helped the purported businessman circumvent the city-imposed limit of $4,950 for individual donors by recruiting 20 fictitious, or straw, donors. </p><p> The arrest represents the latest political blow for Mr. Liu, a popular Democrat from Flushing, Queens, who has been reeling from questions about whether he relied on straw donors as part of his aggressive fund-raising machine. </p><p> It is unclear from the charges whether Mr. Liu knew of the scheme. </p><p> Mr. Pan told the purported businessman that they would organize a fund-raiser in which a handful of straw donors would attend to make it appear that the money was coming from many people, the complaint said. But Mr. Pan said it would be made clear to Mr. Liu that the event was underwritten by the businessman. </p><p> „Here’s the thing, only (the candidate) knows it’s your event,” Mr. Pan told the agent. „Legally, legally, on the form,” Mr. Pan explained, the campaign finance paperwork would make it appear that the contributions came from the checks and credit card payments from the straw donors, the complaint said. </p><p> At the Aug. 17 fund-raiser, Mr. Pan introduced the undercover agent to Mr. Liu as a „very good friend.” He then told Mr. Liu, „Tonight is his event,” referring to the agent. </p><p> The agent recorded the meeting with a concealed video camera. </p><p> Mr. Liu, in a statement released after news broke of Mr. Pan’s arrest, said: „I am saddened by what I read today. If it is true, then the conduct was clearly wrong and my campaign was not told the truth.” </p><p> Mr. Liu’s lawyer, Paul Shechtman, said Wednesday night that Mr. Pan was operating without Mr. Liu’s approval. </p><p> „John Liu is not the first person in public life to have someone try to ingratiate himself by violating the campaign finance laws,” he said. „Today’s arrest is a sad story, but there is no suggestion that Mr. Liu or anyone on his campaign staff did anything wrong.” </p><p> On Wednesday evening, before a plumbers’ union event in Long Island City, Mr. Liu refused to discuss his relationship with Mr. Pan. </p><p> The comptroller, who has in the past said he personally maintained strict controls on his fund-raising operation, has been struggling to address questions after a report last month in The New York Times found that some people listed as his donors in campaign documents said they had never given money to Mr. Liu. </p><p> The Times also found that Mr. Liu had failed to comply with a city requirement that he disclose the names of so-called bundlers — well-connected individuals, like Mr. Pan, who collect contributions for a candidate from friends, relatives, business associates and others. After initially pledging to disclose the identities of those bundlers, Mr. Liu has declined to do so. </p><p> The complaint and subpoenas issued last week by federal prosecutors suggest that the investigation is examining whether there is a broader pattern in which donors seeking to contribute sums larger than the legal limit are funneling the money to the campaign using straw donors. </p><p> Timothy Chuang, who has been active in a Taiwanese merchants association, on Wednesday told The World Journal, a Chinese-language newspaper, that he had helped the owner of Dynasty Stainless Steel — whose records were subpoenaed by federal authorities last week in connection with the Liu inquiry — find 10 people to give to Mr. Liu’s campaign. </p><p> Dynasty’s lawyer, Steve Zissou, had no comment on Wednesday. </p><nyt_author_id> <div class="authorIdentification"><p>Raymond Hernandez and Noah Rosenberg contributed reporting. </p></div> </nyt_author_id><nyt_correction_bottom> </nyt_correction_bottom><nyt_update_bottom> </nyt_update_bottom></div></div></div>'
+  },
+  { "id": 23,
+  "title": "Birth of the Microphone: How Sound Became Signal",
+  "type": "video",
+  "video_id": "15395471",
+  "featured_media_url": "/images/base/PeterColor-4.png",
+  video_type: 'vimeo',
+  content: 'a vimeo video of my making'
+  },
+  { "id": 1801,
+  "type": "image",
+  "featured_media_url": "/images/base/4.jpeg"
+  },
+  { "id": 14002,
+  "type": "video",
+  "video_id": "18461986",
+  video_type: 'vimeo',
+  categoryIds: ['featured'],
+  "featured_media_url": "/images/base/trontriangle.jpeg",
+  content: 'a vimeo video of my making'
+  },
+  { "id": 22,
+  "type": "image",
+  "featured_media_url": "/images/base/2.jpg",
+  content: 'i Love Roya!'
+  },
+  { "id": 21,
+  "title": "Biggest-Ever Night Sky Image Released to Public",
+  content: sample_content
+  },
+  { "id": 19,
+  author_id: 2,
+  "title": "Happy Birthday to John Lasseter",
+  "featuredMedia": "false",
+  content: sample_content2
+  },        
+  { "id": 18,
+  "type": "image",
+  "featured_media_url": "/images/base/4.jpeg",
+  content: 'Long the live the Grid...'
+  },
+  { "id": 14001,
+  "type": "video",
+  "video_id": "18461986",
+  video_type: 'vimeo',
+  "featured_media_url": "/images/base/concept-art-saci.jpeg",
+  content: 'a vimeo video of my making'
+  },
+
+  { "id": 16,
+  "title": "NSA’s Home Base May Have Crappiest Website Ever",
+  "featuredMedia": "false",
+  content: sample_content2
+  },
+  { "id": 15,
+  "type": "image",
+  "featured_media_url": "/images/base/10.png",
+  content: 'i Love Roya!'
+  },
+  { "id": 14,
+  "type": "video",
+  author_id: 2,
+  "video_id": "18461986",
+  video_type: 'vimeo',
+  "featured_media_url": "/images/base/PeterColor-2.png",
+  content: 'a vimeo video of my making'
+  },
+
+  { "id": 13,
+  "title": "Ribbon Microphones: Audio Icon You Can Build in Your Garage",
+  content: sample_content
+
+  },
+  { "id": 12,
+  author_id: 2,
+  "title": "The next Title!",
+  content: sample_content2
+  },
+  { "id": 11,
+  "title": "Rituwall Takes WallStreet by Storm",
+  content: sample_content
+  },
+  { "id": 10,
+  "title": "Rituwall Lrem Ipus is Latin or Something",
+  content: sample_content2
+  },
+  { "id": 9,
+  "title": "This Rituwall is More than the Next Blog!",
+  content: sample_content
+  },
+  { "id": 8,
+  author_id: 2,
+  "title": "A Primer on Rituwall's Graph API",
+  content: '<div id="readability-content"><div id="readability-page-1" class="page"><div><h2>How to use it</h2><p>Use this option to make full use of Bootstrap’s Less variables, mixins, and nesting in CSS via javascript in your browser.</p><pre class="prettyprint linenums">&lt;link rel="stylesheet/less" href="less/bootstrap.less" media="all" /&gt; &lt;script src="js/less-1.1.4.min.js"&gt;&lt;/script&gt;</pre><p>Not feeling the .js solution? <a href="http://incident57.com/less" target="_blank">Try the Less Mac app</a> or <a href="http://lesscss.org/#-client-side-usage" target="_blank">use Node.js</a> to compile when you deploy your code.</p><h2>What’s included</h2><p>Here are some of the highlights of what’s included in Twitter Bootstrap as part of Bootstrap. Head over to the Bootstrap website or Github project page to download and learn more.</p><h3>Variables</h3><p>Variables in Less are perfect for maintaining and updating your CSS headache free. When you want to change a color value or a frequently used value, update it in one spot and you’re set.</p><pre class="prettyprint linenums">// Links @linkColor: #8b59c2; @linkColorHover: darken(@linkColor, 10);// Grays @black: #000; @grayDark: lighten(@black, 25%); @gray: lighten(@black, 50%); @grayLight: lighten(@black, 70%); @grayLighter: lighten(@black, 90%); @white: #fff;// Accent Colors @blue: #08b5fb; @green: #46a546; @red: #9d261d; @yellow: #ffc40d; @orange: #f89406; @pink: #c3325f; @purple: #7a43b6;// Baseline grid @basefont: 13px; @baseline: 18px; </pre><h3>Commenting</h3><p>Less also provides another style of commenting in addition to CSS’s normal <code>/* ... */</code> syntax.</p><pre class="prettyprint linenums">// This is a comment /* This is also a comment */ </pre><h3>Mixins up the wazoo</h3><p>Mixins are basically includes or partials for CSS, allowing you to combine a block of code into one. They’re great for vendor prefixed properties like <code>box-shadow</code>, cross-browser gradients, font stacks, and more. Below is a sample of the mixins that are included with Bootstrap.</p><h4>Font stacks</h4><pre class="prettyprint linenums">#font { .shorthand(@weight: normal, @size: 14px, @lineHeight: 20px) { font-size: @size; font-weight: @weight; line-height: @lineHeight; } .sans-serif(@weight: normal, @size: 14px, @lineHeight: 20px) { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: @size; font-weight: @weight; line-height: @lineHeight; } ... } </pre><h4>Gradients</h4><pre class="prettyprint linenums">#gradient { ... .vertical (@startColor: #555, @endColor: #333) { background-color: @endColor; background-repeat: repeat-x; background-image: -khtml-gradient(linear, left top, left bottom, from(@startColor), to(@endColor)); // Konqueror background-image: -moz-linear-gradient(@startColor, @endColor); // FF 3.6+ background-image: -ms-linear-gradient(@startColor, @endColor); // IE10 background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @startColor), color-stop(100%, @endColor)); // Safari 4+, Chrome 2+ background-image: -webkit-linear-gradient(@startColor, @endColor); // Safari 5.1+, Chrome 10+ background-image: -o-linear-gradient(@startColor, @endColor); // Opera 11.10 background-image: linear-gradient(@startColor, @endColor); // The standard } ... } </pre><h3>Operations</h3><p>Get fancy and perform some math to generate flexible and powerful mixins like the one below.</p><pre class="prettyprint linenums">// Griditude @gridColumns: 16; @gridColumnWidth: 40px; @gridGutterWidth: 20px; @siteWidth: (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));// Make some columns .columns(@columnSpan: 1) { width: (@gridColumnWidth * @columnSpan) + (@gridGutterWidth * (@columnSpan - 1)); } </pre><h2>Compiling Less</h2><p>After modifying the <code>.less</code> files in /lib/, you ll need to recompile them in order to regenerate the bootstrap-*.*.*.css and bootstrap-*.*.*.min.css files. If you re submitting a pull request to GitHub, you must always recompile.</p><h3>Ways to compile</h3><table class="bordered-table zebra-striped"> <thead> <tr> <th>Method</th> <th>Steps</th> </tr> </thead> <tbody> <tr> <td>Node with makefile</td> <td> <p>Install the less command line compiler with npm by running the following command:</p> <pre>$ npm install lessc</pre> <p>Once installed just run <code>make</code> from the root of your bootstrap directory and you re all set.</p> <p>Additionally, if you have <a href="https://github.com/mynyml/watchr">watchr</a> installed, you may run <code>make watch</code> to have bootstrap automatically rebuilt every time you edit a file in the bootstrap lib (this isn t required, just a convenience method).</p> </td> </tr> <tr><td>Javascript</td> <td> <p><a href="http://lesscss.org/">Download the latest Less.js</a> and include the path to it (and Bootstrap) in the <code>head</code>.</p> <pre class="prettyprint linenums">&lt;link rel="stylesheet/less" href="/path/to/bootstrap.less"&gt; &lt;script src="/path/to/less.js"&gt;&lt;/script&gt; </pre> <p>To recompile the .less files, just save them and reload your page. Less.js compiles them and stores them in local storage.</p> </td> </tr><tr> <td>Command line</td> <td> <p>If you already have the less command line tool installed, simply run the following command:</p> <pre>$ lessc ./lib/bootstrap.less bootstrap.css</pre> <p>Be sure to include <code>--compress</code> in that command if you re trying to save some bytes!</p> </td> </tr> <tr> <td>Less Mac app</td> <td> <p><a href="http://incident57.com/less/">The unofficial Mac app</a> watches directories of .less files and compiles the code to local files after every save of a watched .less file.</p> <p>If you like, you can toggle preferences in the app for automatic minifying and which directory the compiled files end up in.</p> </td> </tr> </tbody> </table></div></div></div>'
+
+  },
+  { "id": 7,
+  "type": "video",
+  "video_id": "18017106",
+  "featured_media_url": "/images/base/amazing-photography-by-anastasia-volkova.jpeg",
+  video_type: 'vimeo',
+  content: 'a vimeo video of my making'
+  },
+  { "id": 6,
+  "title": "Behold the begining of the next 2 decades of personal expression",
+  content: sample_content2
+  },
+  {
+  "type": "image",
+  "featured_media_url": "/images/base/6.jpg"  ,
+  content: 'i Love Roya!'
+  },
+  {
+  "type": "image",
+  "featured_media_url": "/images/base/8.jpg"  ,
+  content: 'i Love Roya!'
+  },
+  {
+  "type": "image",
+  "featured_media_url": "/images/base/7.jpeg"  ,
+  content: 'i Love Roya!'
+  }
+  ]
+  };
+
+</script>
+    <script type="text/javascript" src="/javascripts/vendor/assets/javascripts/bigtext.js" ></script>
+    <script type="text/javascript" src="/javascripts/vendor/assets/javascripts/flexslider1.7/jquery.flexslider.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/views/app_templates.js" ></script>
+    <script type="text/javascript" src="/javascripts/themes/d4shelf/assets/javascripts/templates.js" ></script>
+    <script type="text/javascript" src="/javascripts/app/client/initialize.js" ></script>
+    <script type="text/javascript" src="/javascripts/vendor/assets/javascripts/jqueryui.nestedSortable.js" ></script>
+    <script type="text/javascript" src="/javascripts/vendor/assets/javascripts/jmd/showdown.js" ></script>
+    <script type="text/javascript" src="/javascripts/vendor/assets/javascripts/jmd/jquery.markedit.js" ></script>
+    <script type="text/javascript" src="/javascripts/lib/rituwall/support/facebook.js" ></script>
+</body></html>
